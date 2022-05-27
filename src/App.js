@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./App.css"
+import axios from "axios"
 import BackEnd from "./Components/BackEnd"
 import Database from "./Components/Database"
 import FrontEnd from "./Components/FrontEnd"
@@ -77,15 +78,38 @@ function App() {
   }
 
 
-  const callApi = () => {
+
+
+  const CallApi = () => {
     const a = {
       "frontend": f,
       "backend": b,
       "database": d,
     }
     console.log(a)
+    axios.get("https://jsonplaceholder.typicode.com/posts")
+      .then(res => {
+        console.log(res)
+      })
+      .catch(e => {
+        console.log(e)
+      })
+    const arr = {
+      userId: '101',
+      title: 'ashok',
+      body: 'ashok',
+    }
+    axios.post("https://jsonplaceholder.typicode.com/posts", arr)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(e => {
+        console.log(e)
+      })
 
   }
+
+
 
   return (
     <div className="bg-container">
@@ -121,7 +145,7 @@ function App() {
         </div>
       </div>
       <div>
-        <button type="button" onClick={callApi} className="button">Submit</button>
+        <button type="button" onClick={CallApi} className="button">Submit </button>
       </div>
     </div>
   )
