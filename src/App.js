@@ -22,9 +22,9 @@ const appsList = [
   },
   {
     appId: 2,
-    appName: 'Node Js',
+    appName: 'Flask',
     imageUrl:
-      'https://www.quantumversity.com/wp-content/uploads/2020/11/Fundamentals-of-Node.png',
+      'https://miro.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png',
     category: 'BACKEND',
   },
   {
