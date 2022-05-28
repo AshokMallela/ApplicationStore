@@ -88,18 +88,7 @@ function App() {
     }
     console.log(a)
     alert("Applications are Downloading")
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-      .then(res => {
-        console.log(res)
-      })
-      .catch(e => {
-        console.log(e)
-      })
-    const arr = {
-      userId: '101',
-      title: 'ashok',
-      body: 'ashok',
-    }
+    
     axios.post("https://jsonplaceholder.typicode.com/posts", arr)
       .then(res => {
         console.log(res)
